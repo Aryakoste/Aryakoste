@@ -1,0 +1,37 @@
+name: Update README with PRs
+
+on:
+  schedule:
+    - cron: '0 * * * *' 
+  push:
+    branches:
+      - main
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Fetch Pull Requests
+      id: fetch-prs
+      run: |
+        prs=$(curl -H "Authorization: token ${{ secrets.ACCESS_TOKEN }}" https://api.github.com/search/issues?q=type:pr+author:Aryakoste&per_page=5)
+        echo "::set-output name=prs::$prs"
+
+    - name: Update README
+      run: |
+        prs=${{ steps.fetch-prs.outputs.prs }}
+        pr_list=$(echo "$prs" | jq -r '.items[] | "- [\(.title)](\(.html_url))"')
+        readme=$(cat README.md)
+        new_readme=$(echo "$readme" | sed -e "/<!-- PR-LIST-START -->/,/<!-- PR-LIST-END -->/c\\<!-- PR-LIST-START -->\n$pr_list\n<!-- PR-LIST-END -->")
+        echo "$new_readme" > README.md
+
+    - name: Commit changes
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add README.md
+        git commit -m "Update README with latest PRs"
+        git push
