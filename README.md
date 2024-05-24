@@ -1,7 +1,5 @@
 ### Hi there 👋
 
-
-## My Pull Requests
 <!-- PR-LIST-START -->
 <!-- PR-LIST-END -->
 <!--
