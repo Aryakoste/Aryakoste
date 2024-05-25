@@ -14,11 +14,20 @@ async function fetchPRs() {
 }
 
 async function updateReadme() {
+  const readmePath = 'README.md';
+  const readmeContent = fs.existsSync(readmePath) ? fs.readFileSync(readmePath, 'utf-8') : '';
+
+  const startMarker = '<!-- START PRS -->';
+  const endMarker = '<!-- END PRS -->';
+  const regex = new RegExp(`${startMarker}[\\s\\S]*${endMarker}`, 'g');
+  const cleanedReadmeContent = readmeContent.replace(regex, '');
+
   const prs = await fetchPRs();
   const prList = prs.map(pr => `- [${pr.title}](${pr.html_url})`).join('\n');
 
-  const readmeContent = `# My PRs\n\n${prList}\n`;
-  fs.writeFileSync('README.md', readmeContent);
+  const newContent = `${cleanedReadmeContent}\n\n${startMarker}\n## My Pull Requests\n\n${prList}\n${endMarker}\n`;
+
+  fs.writeFileSync(readmePath, newContent);
 }
 
 updateReadme();
