@@ -13,10 +13,10 @@ I am passionate develope
 
 | **Metric**      | **Count**           |
 |------------------|---------------------|
-| 🌟 **Commits**   | `###` (Total Commits) |
-| 🔗 **PRs**       | `###` (Merged PRs)    |
+| 🌟 **Commits**   |🔗 **PRs**       | `126` (Total Commits) |
+| 🔗 **PRs**       | `126`|🌟 **Commits**   |🔗 **PRs**       | `126` (Merged PRs)    |
 
-_Last updated: <!-- Add dynamic date here -->_
+_Last updated: 2024-12-08 <!-- Add dynamic date here -->_
 
 ---
 
