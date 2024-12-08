@@ -1,32 +1,28 @@
-<!--START_REPO_LIST-->
-| [https://api.github.com/repos/mattermost/mattermost](https://https://api.github.com/repos/mattermost/mattermost) | Description placeholder | Contributions |
-| [https://api.github.com/repos/mattermost/mattermost](https://https://api.github.com/repos/mattermost/mattermost) | Description placeholder | Contributions |
-| [https://api.github.com/repos/mattermost/mattermost](https://https://api.github.com/repos/mattermost/mattermost) | Description placeholder | Contributions |
-| [https://api.github.com/repos/mattermost/mattermost](https://https://api.github.com/repos/mattermost/mattermost) | Description placeholder | Contributions |
-| [https://api.github.com/repos/mattermost/mattermost](https://https://api.github.com/repos/mattermost/mattermost) | Description placeholder | Contributions |
-| [https://api.github.com/repos/mattermost/mattermost](https://https://api.github.com/repos/mattermost/mattermost) | Description placeholder | Contributions |
-| [https://api.github.com/repos/mattermost/mattermost](https://https://api.github.com/repos/mattermost/mattermost) | Description placeholder | Contributions |
-| [https://api.github.com/repos/mattermost/mattermost](https://https://api.github.com/repos/mattermost/mattermost) | Description placeholder | Contributions |
-| [https://api.github.com/repos/mattermost/mattermost](https://https://api.github.com/repos/mattermost/mattermost) | Description placeholder | Contributions |
-| [https://api.github.com/repos/mattermost/mattermost](https://https://api.github.com/repos/mattermost/mattermost) | Description placeholder | Contributions |
-| [https://api.github.com/repos/mattermost/mattermost](https://https://api.github.com/repos/mattermost/mattermost) | Description placeholder | Contributions |
-| [https://api.github.com/repos/mattermost/mattermost](https://https://api.github.com/repos/mattermost/mattermost) | Description placeholder | Contributions |
-| [https://api.github.com/repos/mattermost/mattermost](https://https://api.github.com/repos/mattermost/mattermost) | Description placeholder | Contributions |
-| [https://api.github.com/repos/mattermost/mattermost](https://https://api.github.com/repos/mattermost/mattermost) | Description placeholder | Contributions |
-| [https://api.github.com/repos/mattermost/mattermost](https://https://api.github.com/repos/mattermost/mattermost) | Description placeholder | Contributions |
-| [https://api.github.com/repos/mattermost/mattermost](https://https://api.github.com/repos/mattermost/mattermost) | Description placeholder | Contributions |
-| [https://api.github.com/repos/mattermost/mattermost](https://https://api.github.com/repos/mattermost/mattermost) | Description placeholder | Contributions |
-| [https://api.github.com/repos/mattermost/mattermost](https://https://api.github.com/repos/mattermost/mattermost) | Description placeholder | Contributions |
-| [https://api.github.com/repos/mattermost/mattermost](https://https://api.github.com/repos/mattermost/mattermost) | Description placeholder | Contributions |
-| [https://api.github.com/repos/mattermost/mattermost](https://https://api.github.com/repos/mattermost/mattermost) | Description placeholder | Contributions |
-| [https://api.github.com/repos/mattermost/mattermost](https://https://api.github.com/repos/mattermost/mattermost) | Description placeholder | Contributions |
-| [https://api.github.com/repos/mattermost/mattermost](https://https://api.github.com/repos/mattermost/mattermost) | Description placeholder | Contributions |
-| [https://api.github.com/repos/mattermost/mattermost](https://https://api.github.com/repos/mattermost/mattermost) | Description placeholder | Contributions |
-| [https://api.github.com/repos/mattermost/mattermost](https://https://api.github.com/repos/mattermost/mattermost) | Description placeholder | Contributions |
-| [https://api.github.com/repos/mattermost/mattermost](https://https://api.github.com/repos/mattermost/mattermost) | Description placeholder | Contributions |
-| [https://api.github.com/repos/mattermost/mattermost-plugin-playbooks](https://https://api.github.com/repos/mattermost/mattermost-plugin-playbooks) | Description placeholder | Contributions |
-| [https://api.github.com/repos/mattermost/mattermost](https://https://api.github.com/repos/mattermost/mattermost) | Description placeholder | Contributions |
-| [https://api.github.com/repos/mattermost/mattermost](https://https://api.github.com/repos/mattermost/mattermost) | Description placeholder | Contributions |
-| [https://api.github.com/repos/mattermost/mattermost](https://https://api.github.com/repos/mattermost/mattermost) | Description placeholder | Contributions |
-| [https://api.github.com/repos/mattermost/mattermost](https://https://api.github.com/repos/mattermost/mattermost) | Description placeholder | Contributions |
-<!--END_REPO_LIST-->
+### 👋 Hi, I'm Arya!
+
+## About Me
+I am passionate develope
+---
+
+## My Holopin Badges
+[![Holopin Badges](https://holopin.me/aryakoste)](https://holopin.io/@aryakoste)
+
+## My Stats
+
+### 🔢 Contribution Breakdown
+
+| **Metric**      | **Count**           |
+|------------------|---------------------|
+| 🌟 **Commits**   | `###` (Total Commits) |
+| 🔗 **PRs**       | `###` (Merged PRs)    |
+
+_Last updated: <!-- Add dynamic date here -->_
+
+---
+
+## Let’s Connect! 🌐
+
+I'm always excited to meet fellow developers and collaborators. Reach out to me here:
+
+- 💼 [LinkedIn](https://www.linkedin.com/in/arya-khochare-985027241/)  
+
