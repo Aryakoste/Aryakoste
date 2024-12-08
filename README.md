@@ -12,8 +12,8 @@ Hi! I'm Arya, a passionate full stack developer.
 
 | **Metric**      | **Count**           |
 |------------------|---------------------|
-| 🌟 **Commits**   | `425` (Total Commits)|🌟 **Commits**   | `425` (Total Commits) |
-| 🔗 **PRs Merged**       | `126` (Merged PRs)|🔗 **PRs Merged**       | `126` (Merged PRs)    |
+| 🌟 **Commits**   | `###` (Total Commits) |
+| 🔗 **PRs Merged**       | `###` (Merged PRs)    |
 
 _Last updated: 2024-12-08 <!-- Add dynamic date here -->_
 
