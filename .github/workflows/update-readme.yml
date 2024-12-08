@@ -30,6 +30,8 @@ jobs:
 
       - name: Update README
         run: |
+          awk '/<!--START_REPO_LIST-->/ {print; while ((getline < "repo_list.md") > 0) print "| ["$1"](https://"$1") | Description placeholder | Contributions |"} /<!--END_REPO_LIST-->/ {print}' README.md > temp.md
+          mv temp.md README.md
           sed -i "s/🌟 \*\*Commits\*\*   \| \`.*\`/🌟 **Commits**   | \`$TOTAL_COMMITS\`/g" README.md
           sed -i "s/🔗 \*\*PRs\*\*       \| \`.*\`/🔗 **PRs**       | \`$TOTAL_PRS\`/g" README.md
           sed -i "s/Last updated: .*<!-- Add dynamic date here -->/Last updated: $(date '+%Y-%m-%d') <!-- Add dynamic date here -->/g" README.md
@@ -38,5 +40,3 @@ jobs:
           git add README.md
           git commit -m "Update contribution stats"
           git push
-        env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
