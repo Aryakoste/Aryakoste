@@ -1,11 +1,10 @@
-### 👋 Hi, I'm Arya!
+# Welcome to My GitHub Profile! 👋
 
-## About Me
-I am passionate develope
+## About Me 💡
+
+Hi! I'm Arya, a passionate full stack developer.  
+
 ---
-
-## My Holopin Badges
-[![Holopin Badges](https://holopin.me/aryakoste)](https://holopin.io/@aryakoste)
 
 ## My Stats
 
@@ -14,7 +13,7 @@ I am passionate develope
 | **Metric**      | **Count**           |
 |------------------|---------------------|
 | 🌟 **Commits**   | `###` (Total Commits) |
-| 🔗 **PRs**       | `###` (Merged PRs)    |
+| 🔗 **PRs Merged**       | `###` (Merged PRs)    |
 
 _Last updated: <!-- Add dynamic date here -->_
 
