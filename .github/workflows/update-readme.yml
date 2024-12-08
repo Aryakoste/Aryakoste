@@ -1,27 +1,42 @@
-name: Update README with PRs
+name: Update Contribution Stats
 
 on:
   schedule:
-    - cron: '0 * * * *'
-  push:
-    branches:
-      - main
+    - cron: '0 0 * * *' 
+  workflow_dispatch: 
 
 jobs:
-  update-readme:
+  update-stats:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-
-      - name: Fetch PRs and update README
-        env:
-          MY_GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+      - name: Get Total Commits
         run: |
-          npm install axios
-          node update-readme.js
+          TOTAL_COMMITS=$(curl -s "https://api.github.com/search/commits?q=author:Aryakoste" \
+            -H "Accept: application/vnd.github.cloak-preview" | jq '.total_count')
+          echo "TOTAL_COMMITS=$TOTAL_COMMITS" >> $GITHUB_ENV
+
+      - name: Get PR Stats
+        run: |
+          TOTAL_PRS=$(curl -s "https://api.github.com/search/issues?q=author:Aryakoste+type:pr" | jq '.total_count')
+          echo "TOTAL_PRS=$TOTAL_PRS" >> $GITHUB_ENV
+
+      - name: Fetch Contributed Repositories
+        run: |
+          REPOS=$(curl -s "https://api.github.com/search/issues?q=author:Aryakoste+type:pr" | jq -r '.items[] | select(.repository_url) | [.repository_url, .title] | @tsv')
+          echo "$REPOS" > repo_list.md
+
+      - name: Update README
+        run: |
+          awk '/<!--START_REPO_LIST-->/ {print; while ((getline < "repo_list.md") > 0) print "| ["$1"](https://"$1") | Description placeholder | Contributions |"} /<!--END_REPO_LIST-->/ {print}' README.md > temp.md
+          mv temp.md README.md
+          sed -i "s/🌟 \*\*Commits\*\*   \| \`.*\`/🌟 **Commits**   | \`$TOTAL_COMMITS\`/g" README.md
+          sed -i "s/🔗 \*\*PRs\*\*       \| \`.*\`/🔗 **PRs**       | \`$TOTAL_PRS\`/g" README.md
+          sed -i "s/Last updated: .*<!-- Add dynamic date here -->/Last updated: $(date '+%Y-%m-%d') <!-- Add dynamic date here -->/g" README.md
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "Update contribution stats"
+          git push
