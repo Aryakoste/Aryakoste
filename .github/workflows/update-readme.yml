@@ -14,13 +14,9 @@ jobs:
 
       - name: Get Total Commits
         run: |
-          # Fetch all commits made by the user across repositories
-          USERNAME="<your-username>"
-          TOTAL_COMMITS=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
-            "https://api.github.com/search/commits?q=author:$USERNAME" \
+          TOTAL_COMMITS=$(curl -s "https://api.github.com/search/commits?q=author:Aryakoste" \
             -H "Accept: application/vnd.github.cloak-preview" | jq '.total_count')
-          
-          echo "$TOTAL_COMMITS" > total_commits.txt
+          echo "TOTAL_COMMITS=$TOTAL_COMMITS" >> $GITHUB_ENV
 
       - name: Get PR Stats
         run: |
@@ -29,11 +25,20 @@ jobs:
 
       - name: Update README
         run: |
-          sed -i "s/🌟 \*\*Commits\*\*   \| \`.*\`/🌟 **Commits**   | \`$(cat total_commits.txt)\`/g" README.md
-          sed -i "s/🔗 \*\*PRs\*\*       \| \`.*\`/🔗 **PRs**       | \`$TOTAL_PRS\`/g" README.md
-          sed -i "s/Last updated: .*<!-- Add dynamic date here -->/Last updated: $(date '+%Y-%m-%d') <!-- Add dynamic date here -->/g" README.md
+          # Update the "Commits" section
+          sed -i "s/🌟 \*\*Commits\*\*   \| \`###\` (Total Commits)/🌟 **Commits**   | \`$TOTAL_COMMITS\` (Total Commits)/g" README.md
+          
+          # Update the "PRs Merged" section
+          sed -i "s/🔗 \*\*PRs Merged\*\*       \| \`###\` (Merged PRs)/🔗 **PRs Merged**       | \`$TOTAL_PRS\` (Merged PRs)/g" README.md
+          
+          # Update the "Last updated" date
+          sed -i "s/_Last updated: .* <!-- Add dynamic date here -->/_Last updated: $(date '+%Y-%m-%d') <!-- Add dynamic date here -->/g" README.md
+
+          # Configure git user
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          # Commit and push changes
           git add README.md
           git commit -m "Update contribution stats"
           git push
