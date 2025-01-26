@@ -28,6 +28,12 @@
 
 ## Github Stats
 
+| **Metric**      | **Count**           |
+|------------------|---------------------|
+| 🌟 **Commits**   | `###` (Total Commits) |
+| 🔗 **PRs Merged**       | `###` (Merged PRs)    |
+
+_Last updated: 2024-12-08 <!-- Add dynamic date here -->_
 
 <div align="center">
 
@@ -36,15 +42,7 @@
 ![](http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Aryakoste&theme=gotham)
 ![](http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Aryakoste&theme=gotham) 
 
-If you're interested in my contributions, feel free to explore the detailed stats and graphs provided by GitHub below! 🚀  
-They showcase my commit history, repositories, and all the projects I've been a part of.
-
-➡️ [Visit my GitHub contribution graph and activity](#user-content-contributions)
-
 </div>
-
-
-
 
 ## Let’s Connect! 🌐
 

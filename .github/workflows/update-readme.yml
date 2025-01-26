@@ -24,12 +24,15 @@ jobs:
           echo "TOTAL_PRS=$TOTAL_PRS" >> $GITHUB_ENV
 
       - name: Update README
+        env:
+          TOTAL_PRS: ${{ env.TOTAL_PRS }}
+          TOTAL_COMMITS: ${{ env.TOTAL_COMMITS }}
         run: |
           # Update the "Commits" section
-          sed -i "s/🌟 \*\*Commits\*\*   \| \`###\` (Total Commits)/🌟 **Commits**   | \`$TOTAL_COMMITS\` (Total Commits)/g" README.md
+          sed -i "s/🌟 \*\*Commits\*\*   \| \`.*\` (Total Commits)/🌟 **Commits**   | \`${TOTAL_COMMITS}\` (Total Commits)/g" README.md
           
           # Update the "PRs Merged" section
-          sed -i "s/🔗 \*\*PRs Merged\*\*       \| \`###\` (Merged PRs)/🔗 **PRs Merged**       | \`$TOTAL_PRS\` (Merged PRs)/g" README.md
+          sed -i "s/🔗 \*\*PRs Merged\*\*       \| \`.*\` (Merged PRs)/🔗 **PRs Merged**       | \`${TOTAL_PRS}\` (Merged PRs)/g" README.md
           
           # Update the "Last updated" date
           sed -i "s/_Last updated: .* <!-- Add dynamic date here -->/_Last updated: $(date '+%Y-%m-%d') <!-- Add dynamic date here -->/g" README.md
