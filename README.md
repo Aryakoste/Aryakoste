@@ -31,9 +31,9 @@
 | **Metric**      | **Count**           |
 |------------------|---------------------|
 | 🌟 **Commits**   | `507` (Total Commits)|🌟 **Commits**   | `507` (Total Commits) |
-| 🔗 **PRs Merged**       | `128` (Merged PRs)|🔗 **PRs Merged**       | `128` (Merged PRs)    |
+| 🔗 **PRs Merged**       | `132` (Merged PRs)|🔗 **PRs Merged**       | `132` (Merged PRs)    |
 
-_Last updated: 2025-02-01 <!-- Add dynamic date here -->_
+_Last updated: 2025-02-02 <!-- Add dynamic date here -->_
 
 <div align="center">
 
